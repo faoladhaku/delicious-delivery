@@ -9,37 +9,18 @@
 
   <title>Delicius Delivery</title>
 
-  <!-- Bootstrap core CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   
-  <!-- Custom styles for this template -->
-  <link href="../css/app.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/login.css">
 
 </head>
 
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#">Delicius Delivery</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="home">Login</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Registro</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
   <!-- Page Content -->
+  <!--
   <section>
     <div class="container">
       <div class="row">
@@ -52,10 +33,47 @@ Se solicitará al contratar el servicio el cuestionario de qué postres y refres
       </div>
     </div>
   </section>
+	-->
+	
+	<main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
+		<div class="container">
+		<div class="card login-card">
+			<div class="row no-gutters">
+			<div class="col-md-5">
+				<img src="/img/inicio.jpg" alt="login" class="login-card-img">
+			</div>
+			<div class="col-md-7">
+				<div class="card-body">
+				<div class="brand-wrapper">
+					<img src="/img/logo.svg" alt="logo" class="logo">
+				</div>
+				<p class="login-card-description">Iniciar Sesion</p>
+				<form action="#!">
+					<div class="form-group">
+						<label for="email" class="sr-only">Email</label>
+						<input type="email" name="email" id="email" class="form-control" placeholder="Email">
+					</div>
+					<div class="form-group mb-4">
+						<label for="password" class="sr-only">Password</label>
+						<input type="password" name="password" id="password" class="form-control" placeholder="***********">
+					</div>
+					<input name="login" id="login" class="btn btn-block login-btn mb-4" type="button" value="Login">
+					</form>
+					<a href="#!" class="forgot-password-link">Olvidaste tu Password?</a>
+					<p class="login-card-footer-text">No tienes cuenta? <a href="#!" class="text-reset"> Registrate aqui</a></p>
+
+				</div>
+			</div>
+			</div>
+		</div>
+	
+		</div>
+	</main>
 
   	<!-- Bootstrap core JavaScript -->
-  	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>
