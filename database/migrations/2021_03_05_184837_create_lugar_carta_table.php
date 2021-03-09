@@ -13,7 +13,7 @@ class CreateLugarCartaTable extends Migration
      */
     public function up()
     {
-        Schema::create('lugar_carta', function (Blueprint $table) {
+        Schema::create('carta', function (Blueprint $table) {
 
             $table->increments('id');
             $table->unsignedInteger('comidas_id');
@@ -35,6 +35,6 @@ class CreateLugarCartaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('lugar_carta');
+        Schema::dropIfExists('carta');
     }
 }

@@ -53,7 +53,6 @@ class LoginController extends Controller
            Auth::login($user);
            return redirect()->to('Dashboard');
        }else{
-           dd($userSocial->getName());
            return view('Registro',['nombre' => $userSocial->getName(), 'email' => $userSocial->getEmail()]);
        }
    }
