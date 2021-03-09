@@ -9,6 +9,7 @@
 
   <title>SingUp</title>
 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
   <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -44,6 +45,16 @@
 					<input name="login" id="login" class="btn btn-block login-btn mb-4" type="button" value="Registro">
 					</form>
 
+		
+
+					<div class="login_wrapper">
+
+					<div class="row">
+						<div class="col-lg-6 col-md-6 col-xs-12 col-sm-6"> <a href="{{ url('login/facebook') }}" class="btn btn-primary facebook"> <span>Register with Facebook</span> <i class="fab fa-facebook"></i> </a> </div>
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6"> <a href="{{ url('login/google') }}" class="btn btn-primary google-plus"> Register  with Google <i class="fab fa-google-plus"></i> </a> </div>
+					</div>
+
+				</div>
 				</div>
 			</div>
 			</div>
