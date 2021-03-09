@@ -8,7 +8,7 @@
   <meta name="author" content="">
 
   <title>Delicius Delivery</title>
-
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
   <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -59,6 +59,13 @@ Se solicitará al contratar el servicio el cuestionario de qué postres y refres
 					</div>
 					<input name="login" id="login" class="btn btn-block login-btn mb-4" type="button" value="Login">
 					</form>
+				<div class="form-group">
+					<div class="col-md-6">
+					Iniciar Sesion con una red social
+						<a href="{{ url('login/facebook') }}" class="btn btn-social-icon btn-facebook"> <i class="fab fa-facebook"></i></a>
+						<a href="{{ url('login/google') }}" class="btn btn-social-icon btn-google-plus"> <i class="fab fa-google-plus"></i></a>
+					</div>
+				</div>
 					<a href="#!" class="forgot-password-link">Olvidaste tu Password?</a>
 					<p class="login-card-footer-text">No tienes cuenta? <a href="#!" class="text-reset"> Registrate aqui</a></p>
 
