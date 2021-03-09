@@ -14,7 +14,9 @@ class CreateComidasTable extends Migration
     public function up()
     {
         Schema::create('comidas', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('nombre');
+            $table->string('descripcion');
             $table->timestamps();
         });
     }

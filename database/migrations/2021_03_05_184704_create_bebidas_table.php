@@ -14,7 +14,9 @@ class CreateBebidasTable extends Migration
     public function up()
     {
         Schema::create('bebidas', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('nombre');
+            $table->string('descripcion');
             $table->timestamps();
         });
     }

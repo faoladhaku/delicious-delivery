@@ -14,7 +14,9 @@ class CreatePedidosTable extends Migration
     public function up()
     {
         Schema::create('pedidos', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->date('Fecha_Inicio');
+            $table->date('Fecha_Final');
             $table->timestamps();
         });
     }

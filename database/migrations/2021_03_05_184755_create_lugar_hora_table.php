@@ -14,7 +14,9 @@ class CreateLugarHoraTable extends Migration
     public function up()
     {
         Schema::create('lugar_hora', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('direccion');
+            $table->time('Hora');
             $table->timestamps();
         });
     }
