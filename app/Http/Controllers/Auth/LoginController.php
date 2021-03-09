@@ -7,6 +7,7 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Laravel\Socialite\Facades\Socialite;
+use Illuminate\Support\Facades\DB;
 
 class LoginController extends Controller
 {
@@ -46,17 +47,14 @@ class LoginController extends Controller
 
     public function handleProviderCallback($social)
    {
-       /*
        $userSocial = Socialite::driver($social)->user();
-       $user = User::where(['email' => $userSocial->getEmail()])->first();
+       $user = DB::table('user')->where(['email' => $userSocial->getEmail()])->first();
        if($user){
            Auth::login($user);
-           return redirect()->action('Dashboard@index');
+           return redirect()->to('Dashboard');
        }else{
-           return view('auth.register',['name' => $userSocial->getName(), 'email' => $userSocial->getEmail()]);
+           dd($userSocial->getName());
+           return view('Registro',['nombre' => $userSocial->getName(), 'email' => $userSocial->getEmail()]);
        }
-       */
-      $userSocial = Socialite::driver($social)->user();
-      return redirect()->action('Dashboard@index');
    }
 }
