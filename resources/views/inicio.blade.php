@@ -58,14 +58,32 @@ Se solicitará al contratar el servicio el cuestionario de qué postres y refres
 						<input type="password" name="password" id="password" class="form-control" placeholder="***********">
 					</div>
 					<input name="login" id="login" class="btn btn-block login-btn mb-4" type="button" value="Login">
-					</form>
+				
+				</form>
+
+				Iniciar Sesion con una red social
+				<div class="login_wrapper">
+
+					<div class="row">
+						<div class="col-lg-6 col-md-6 col-xs-12 col-sm-6"> <a href="{{ url('login/facebook') }}" class="btn btn-primary facebook"> <span>Login with Facebook</span> <i class="fab fa-facebook"></i> </a> </div>
+                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6"> <a href="{{ url('login/google') }}" class="btn btn-primary google-plus"> Login with Google <i class="fab fa-google-plus"></i> </a> </div>
+					</div>
+
+				</div>
+
 				<div class="form-group">
+<!-- 
 					<div class="col-md-6">
 					Iniciar Sesion con una red social
 						<a href="{{ url('login/facebook') }}" class="btn btn-social-icon btn-facebook"> <i class="fab fa-facebook"></i></a>
 						<a href="{{ url('login/google') }}" class="btn btn-social-icon btn-google-plus"> <i class="fab fa-google-plus"></i></a>
+			
 					</div>
+-->
+
+
 				</div>
+			
 					<a href="#!" class="forgot-password-link">Olvidaste tu Password?</a>
 					<p class="login-card-footer-text">No tienes cuenta? <a href="#!" class="text-reset"> Registrate aqui</a></p>
 
