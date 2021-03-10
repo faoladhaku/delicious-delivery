@@ -29,4 +29,9 @@ Route::get('/Registro',function()
 	return view('Registro');
 });
 
+Route::get('/dashboard',function()
+{
+	return view('dashboard');
+});
+
 Auth::routes();
