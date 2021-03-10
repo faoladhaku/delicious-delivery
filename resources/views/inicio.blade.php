@@ -85,7 +85,7 @@ Se solicitará al contratar el servicio el cuestionario de qué postres y refres
 				</div>
 			
 					<a href="#!" class="forgot-password-link">Olvidaste tu Password?</a>
-					<p class="login-card-footer-text">No tienes cuenta? <a href="#!" class="text-reset"> Registrate aqui</a></p>
+					<p class="login-card-footer-text">No tienes cuenta? <a href="{{ url('/signup') }}" class="text-reset"> Registrate aqui</a></p>
 
 				</div>
 			</div>
