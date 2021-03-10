@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
-use App\Models\user;
+use App\Models\User;
 class LoginController extends Controller
 {
     /*
@@ -54,14 +54,15 @@ class LoginController extends Controller
            Auth::login($user->email,true);
            return redirect()->to('dashboard');
        }else{
-            $newuser = new user;
+            $newuser = new User;
             $newuser->name = $userSocial->getName();
             $newuser->email = $userSocial->getEmail();
             $newuser->save();
-            $test = user::where(['email' => $userSocial->getEmail()])->first();
+            $test = User::where(['email' => $userSocial->getEmail()])->first();
             
             Auth::login($test,false);
-            Auth::logout();
+            
+            //Auth::logout();
             return redirect('/dashboard');
         }
    }

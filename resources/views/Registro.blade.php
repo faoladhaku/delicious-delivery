@@ -30,7 +30,8 @@
 
 				<p class="login-card-description">Registro</p>
 				
-				<form action="#!">
+				<form action="/signup/new" method="POST">
+					@csrf
 					<div class="form-group mb-4">
 						<label for="nombre" class="sr-only">Nombre</label>
 						<input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre y Apellido">

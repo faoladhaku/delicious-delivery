@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Validator;
+use App\Models\User;
 class RegisterController extends Controller
 {
     public function index(){
-        return view(Registro);
+        return view('Registro');
     }
     public function create(Request $request){
         $rules = [
@@ -20,14 +21,14 @@ class RegisterController extends Controller
 		];
 		$validator = Validator::make($request->all(),$rules);
 		if ($validator->fails()) {
-			return redirect('Registro')
+			return back()
 			->withInput()
 			->withErrors($validator);
 		}
 		else{
             $data = $request->input();
 			try{
-				$user = new user;
+				$user = new User;
                 $user->name = $data['nombre'];
                 $user->email = $data['email'];
 				$user->password = $data['password'];
