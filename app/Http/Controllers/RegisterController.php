@@ -14,10 +14,13 @@ class RegisterController extends Controller
         $rules = [
 			'nombre' => 'required|string|min:3|max:255',
 			'email' => 'required|string|email|max:255',
+            /*
             'password' =>   ['required', 
                             'min:6', 
                             'regex:/^.*(?=.{3,})(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[\d\x])(?=.*[!$#%]).*$/', 
                             'confirmed']
+            */
+            'password' => 'required|string|min:3|max:255'
 		];
 		$validator = Validator::make($request->all(),$rules);
 		if ($validator->fails()) {
