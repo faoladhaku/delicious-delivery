@@ -32,7 +32,7 @@
     <a class="navbar-brand" href="#">Nombre de la Usuario</a>
       <button class="btn btn-sm btn-outline-secondary" type="submit">Perfil</button>
 
-        <button class="btn btn-sm btn-outline-secondary" type="submit">Sign Out</button>
+        <button class="btn btn-sm btn-outline-secondary" type="submit">Log Out</button>
     </form>
     
 

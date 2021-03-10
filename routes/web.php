@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,12 +24,8 @@ Route::get('login/{social}', [App\Http\Controllers\Auth\LoginController::class,'
 Route::get('login/{social}/callback', [App\Http\Controllers\Auth\LoginController::class,'handleProviderCallback'])->where('social','twitter|facebook|google');
 Route::get('signup',[App\Http\Controllers\Auth\RegisterController::class,'index']);
 
-Route::get('dashboard',[App\Http\Controllers\DashboardController::class,'index']);
-Route::post('signup/new',[App\Http\Controllers\DashboardController::class,'add']);
+Route::get('/dashboard',[App\Http\Controllers\DashboardController::class,'index']);
+//Route::post('/signup/new',[App\Http\Controllers\DashboardController::class,'add']);
 
-Route::get('/dashboard',function()
-{
-	return view('dashboard');
-});
 
 Auth::routes();

@@ -60,7 +60,8 @@ class LoginController extends Controller
             $newuser->save();
             $test = user::where(['email' => $userSocial->getEmail()])->first();
             
-            Auth::login($test,true);
+            Auth::login($test,false);
+            Auth::logout();
             return redirect('/dashboard');
         }
    }

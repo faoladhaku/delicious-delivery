@@ -7,11 +7,11 @@ use \Illuminate\Http\Response;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
 
-class LoginController extends Controller
+class DashboardController extends Controller
 {
     public function index()
     {
-        return view("Dashboard");
+        return view("dashboard");
     }
     
 }
