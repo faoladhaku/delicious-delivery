@@ -8,8 +8,10 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Auth;
+//use Illuminate\Support\Facades\Auth;
+use Auth;
 use App\Models\User;
+use Illuminate\Support\Facades\Log;
 class LoginController extends Controller
 {
     /*
@@ -49,21 +51,25 @@ class LoginController extends Controller
     public function handleProviderCallback($social)
    {
        $userSocial = Socialite::driver($social)->stateless()->user();
-       $user = DB::table('user')->where(['email' => $userSocial->getEmail()])->first();
-       if($user){
-           Auth::login($user->email,true);
+       //$finduser = DB::table('user')->where(['email' => $userSocial->getEmail()])->first();
+       $finduser = User::where(['email' => $userSocial->getEmail()])->first();
+       if($finduser){
+            //Auth::login($user);
+            //Log::info('datanoexistente'.$finduser);
+            Auth::login($finduser);   
+           //dd($user);
            return redirect()->to('dashboard');
        }else{
             $newuser = new User;
             $newuser->name = $userSocial->getName();
             $newuser->email = $userSocial->getEmail();
             $newuser->save();
-            $test = User::where(['email' => $userSocial->getEmail()])->first();
-            
-            Auth::login($test,false);
-            
-            //Auth::logout();
-            return redirect('/dashboard');
+            $user1 = User::where(['email' => $userSocial->getEmail()])->first();
+            Log::info('datanoexistente'.$user1);
+            //dd($user);
+            //Auth::login($user,false);
+            Auth::login($newuser);
+            return redirect('dashboard');
         }
    }
 }

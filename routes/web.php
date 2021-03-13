@@ -25,7 +25,7 @@ Route::get('login/{social}/callback', [App\Http\Controllers\Auth\LoginController
 Route::get('signup',[App\Http\Controllers\RegisterController::class,'index']);
 Route::post('signup/new',[App\Http\Controllers\RegisterController::class,'create']);
 Route::get('/dashboard',[App\Http\Controllers\DashboardController::class,'index']);
-//
+Route::get('/logout',[App\Http\Controllers\DashboardController::class,'logout']);
 
 
 Auth::routes();
