@@ -43,23 +43,24 @@
 
 			<div class="container w-100 p-3">
 				<div class="row justify-content-md-center">
-					<h1 class="text-light">Delicious</h1>
+					<h1 class="text-light">Delicious Delivery</h1>
 				</div>
 			</div>
 
 			<div class="profile">
 				<img src="/img/perfil.jpg" alt="" class="img-fluid rounded-circle">
-				<h1 class="text-light"><a href="index.html">Bienvenido {{$name}}</a></h1>
+				<h1 class="text-light">Bienvenido {{$name}}</h1>
 
 			</div>
 	
 			<nav id="navbar" class="nav-menu navbar">
 				<ul>
+                    <li><a href="/dashboard"><i class="bi bi-house-fill" style="color:white; font-size: 1.1rem;"></i> <span>Inicio</span></a></li>
 					<li><a href="#" class="nav-link scrollto active"><i class="bi bi-calendar-event" style="color:white; font-size: 1.1rem;"></i> <span>Calendario</span></a></li>
 					<li><a href="#" class="nav-link scrollto"><i class="bi bi-card-checklist" style="color:white; font-size: 1.1rem;"></i> <span>Pedidos</span></a></li>
 					<li><a href="#" class="nav-link scrollto"><i class="bi bi-images" style="color:white; font-size: 1.1rem;"></i> <span>Galeria</span></a></li>
 					<li><a href="#" class="nav-link scrollto"><i class="bi bi-cash-stack" style="color:white; font-size: 1.1rem;"></i> <span>Promociones</span></a></li>
-					<li><a href="/logout" id=logout></i> <span>Logout</span></a></li>
+					<li><a href="/logout" id=logout><i class="bi bi-door-closed-fill" style="color:white; font-size: 1.1rem;"></i> <span>Logout</span></a></li>
 				</ul>
 			</nav>
 
