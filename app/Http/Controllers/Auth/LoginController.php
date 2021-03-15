@@ -62,7 +62,9 @@ class LoginController extends Controller
             $request->session()->regenerate();
             return redirect('dashboard.dashboard');
         }
-        return view("dashboard.dashboard",['name'=>$request->name]);
+        return back()->withErrors([
+            'email' => 'The provided credentials do not match our records.',
+        ]);
         //dd("no entre");
         /*
         return back()->withErrors([

@@ -27,6 +27,6 @@ Route::get('signup',[App\Http\Controllers\RegisterController::class,'index']);
 Route::post('signup/new',[App\Http\Controllers\RegisterController::class,'create']);
 Route::get('/dashboard',[App\Http\Controllers\DashboardController::class,'index']);
 Route::get('/logout',[App\Http\Controllers\DashboardController::class,'logout']);
-
+Route::get('/menu',[App\Http\Controllers\DashboardController::class,'menu']);
 
 Auth::routes();
