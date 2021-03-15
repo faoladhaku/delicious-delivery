@@ -13,7 +13,7 @@ class DashboardController extends Controller
     public function index()
     {
         $currentUser = Auth::user();
-        return view("dashboard",['name'=>$currentUser->name]);
+        return view("dashboard.dashboard",['name'=>$currentUser->name]);
     }
     public function logout()
     {

@@ -21,6 +21,7 @@ Route::get('/',function()
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('login/{social}', [App\Http\Controllers\Auth\LoginController::class,'socialLogin'])->where('social','twitter|facebook|google');
+Route::post('login/normal', [App\Http\Controllers\Auth\LoginController::class,'normalLogin']);
 Route::get('login/{social}/callback', [App\Http\Controllers\Auth\LoginController::class,'handleProviderCallback'])->where('social','twitter|facebook|google');
 Route::get('signup',[App\Http\Controllers\RegisterController::class,'index']);
 Route::post('signup/new',[App\Http\Controllers\RegisterController::class,'create']);

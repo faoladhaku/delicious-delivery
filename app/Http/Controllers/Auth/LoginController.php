@@ -47,7 +47,29 @@ class LoginController extends Controller
     {
         return Socialite::driver($social)->redirect();
     }
-
+    public function normalLogin(Request $request)
+    {
+        /*
+        $array = array(
+            'name' => $normal->name,
+            'email' => $normal->email
+        );*/
+        
+        $credentials = $request->only('email', 'password');
+        //dd($request['email']);
+        //dd(Auth::attempt(['email'=>$request['email'],'password'=>$request['password']]));
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+            return redirect('dashboard.dashboard');
+        }
+        return view("dashboard.dashboard",['name'=>$request->name]);
+        //dd("no entre");
+        /*
+        return back()->withErrors([
+            'email' => 'The provided credentials do not match our records.',
+        ]);
+        */
+    }
     public function handleProviderCallback($social)
    {
        $userSocial = Socialite::driver($social)->stateless()->user();
