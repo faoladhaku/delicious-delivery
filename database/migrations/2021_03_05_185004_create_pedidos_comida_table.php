@@ -15,8 +15,8 @@ class CreatePedidosComidaTable extends Migration
     {
         Schema::create('pedidos_comida', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('pedidos_id')->nullable();
-            $table->foreign('pedidos_id')->references('id')->on('pedidos');
+//            $table->unsignedInteger('pedidos_id')->nullable();
+ //           $table->foreign('pedidos_id')->references('id')->on('pedidos');
             $table->unsignedInteger('Lunes')->nullable();
             $table->foreign('Lunes')->references('id')->on('carta');
             $table->unsignedInteger('Martes')->nullable();

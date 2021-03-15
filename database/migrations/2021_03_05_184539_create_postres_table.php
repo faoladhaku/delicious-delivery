@@ -17,6 +17,7 @@ class CreatePostresTable extends Migration
             $table->increments('id');
             $table->string('nombre');
             $table->string('descripcion');
+            $table->string('url');
             $table->timestamps();
         });
     }

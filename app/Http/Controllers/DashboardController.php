@@ -29,4 +29,24 @@ class DashboardController extends Controller
         Auth::logout();
         return redirect('/');
     }
+    public function showProfile()
+    {
+        $_user = Auth::user();
+        return view("Perfil",['name'=>$_user]);
+    }
+    public function edit()
+    {
+        $_user = Auth::user();
+        return view("EditarPerfil",['name'=>$_user]);
+    }
+    public function editPerfil(Request $request)
+    {   
+        $_user = Auth::user();
+        $UpUser = User::find($_user->id);
+        $UpUser->name = $request->nombre;
+        #$UpUser->email = $request->email;
+        $UpUser->save();
+       
+        return view("Perfil",['name'=>$UpUser]);
+    }
 }

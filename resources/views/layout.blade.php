@@ -58,6 +58,7 @@
 	
 			<nav id="navbar" class="nav-menu navbar">
 				<ul>
+					<li><a href="/perfil" class="nav-link scrollto"><i class="bi bi-person-circle" style="color:white; font-size: 1.1rem;"></i> <span>Perfil</span></a></li>
                     <li><a href="/dashboard" class="nav-link scrollto active"><i class="bi bi-house-fill" style="color:white; font-size: 1.1rem;"></i> <span>Inicio</span></a></li>
 					<li><a href="/menu" class="nav-link scrollto"><i class="bi bi-calendar-event" style="color:white; font-size: 1.1rem;"></i> <span>Menú</span></a></li>
 					<li><a href="#" class="nav-link scrollto"><i class="bi bi-card-checklist" style="color:white; font-size: 1.1rem;"></i> <span>Pedidos</span></a></li>
@@ -82,6 +83,9 @@
 	
 
 	</main>
+
+
+
 
 	<footer id="footer">
 		<div class="container">

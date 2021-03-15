@@ -28,5 +28,7 @@ Route::post('signup/new',[App\Http\Controllers\RegisterController::class,'create
 Route::get('/dashboard',[App\Http\Controllers\DashboardController::class,'index']);
 Route::get('/logout',[App\Http\Controllers\DashboardController::class,'logout']);
 Route::get('/menu',[App\Http\Controllers\DashboardController::class,'menu']);
-
+Route::get('/perfil',[App\Http\Controllers\DashboardController::class,'showProfile']);
+Route::get('/editP',[App\Http\Controllers\DashboardController::class,'edit']);
+Route::post('/editProfile',[App\Http\Controllers\DashboardController::class,'editPerfil']);
 Auth::routes();
