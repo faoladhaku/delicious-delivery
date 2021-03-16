@@ -61,10 +61,72 @@ class DashboardController extends Controller
                     ->join('servicio','pedidos.id_servicio','=','servicio.id')
                     ->select('*')
                     ->get();
-
-
         return view("Pedidos",['name'=>$currentUser,'items'=>$items2]);
     }
+
+    protected function getData($table,$item,$id)
+    {
+        return DB::table($table)->select('*')->where($item, '=', $id )->get();
+
+    }
+    public function InfoPedidos($id)
+    {   
+        $currentUser = Auth::user();
+        $item = $this->getData('pedidos_comida','id',$id);
+
+        $Lunes =  $this->getData('carta','id',$item[0]->Lunes);
+        $Martes =  $this->getData('carta','id',$item[0]->Martes);
+        $Miercoles =  $this->getData('carta','id',$item[0]->Miercoles);
+        $Jueves =  $this->getData('carta','id',$item[0]->Jueves);
+        $Viernes =  $this->getData('carta','id',$item[0]->Viernes);
+        $Sabado =  $this->getData('carta','id',$item[0]->Sabado);
+        $Domingo =  $this->getData('carta','id',$item[0]->Domingo);
+
+        $_Lunes = array(
+            'Comida' => $this->getData('comidas','id',$Lunes[0]->comidas_id),
+            'Bebida' => $this->getData('bebidas','id',$Lunes[0]->bebida_id),
+            'postre' => $this->getData('postres','id',$Lunes[0]->postre_id)
+        );
+        $_Martes = array(
+            'Comida' => $this->getData('comidas','id',$Martes[0]->comidas_id),
+            'Bebida' => $this->getData('bebidas','id',$Martes[0]->bebida_id),
+            'postre' => $this->getData('postres','id',$Martes[0]->postre_id)
+        );
+        $_Miercoles = array(
+            'Comida' => $this->getData('comidas','id',$Miercoles[0]->comidas_id),
+            'Bebida' => $this->getData('bebidas','id',$Miercoles[0]->bebida_id),
+            'postre' => $this->getData('postres','id',$Miercoles[0]->postre_id)
+        );
+        $_Jueves = array(
+            'Comida' => $this->getData('comidas','id',$Jueves[0]->comidas_id),
+            'Bebida' => $this->getData('bebidas','id',$Jueves[0]->bebida_id),
+            'postre' => $this->getData('postres','id',$Jueves[0]->postre_id)
+        );
+        $_Viernes = array(
+            'Comida' => $this->getData('comidas','id',$Viernes[0]->comidas_id),
+            'Bebida' => $this->getData('bebidas','id',$Viernes[0]->bebida_id),
+            'postre' => $this->getData('postres','id',$Viernes[0]->postre_id)
+        );
+        $_Sabado = array(
+            'Comida' => $this->getData('comidas','id',$Sabado[0]->comidas_id),
+            'Bebida' => $this->getData('bebidas','id',$Sabado[0]->bebida_id),
+            'postre' => $this->getData('postres','id',$Sabado[0]->postre_id)
+        );
+        $_Domingo = array(
+            'Comida' => $this->getData('comidas','id',$Domingo[0]->comidas_id),
+            'Bebida' => $this->getData('bebidas','id',$Domingo[0]->bebida_id),
+            'postre' => $this->getData('postres','id',$Domingo[0]->postre_id)
+        );
+ 
+        $items = array(
+            'Lu'=>$_Lunes,
+            'Ma'=>$_Martes,
+            'Mi'=>$_Miercoles,'Ju'=>$_Jueves,'Vi'=>$_Viernes,'Sa'=>$_Sabado,'Do'=>$_Domingo
+        );
+       # dd($items);
+        return view("VerPedidos",['name'=>$currentUser,'_items'=>$items]);
+    }
+
     public function nuevoPedido(Request $request)
     {
         $data = $request->input();
