@@ -31,4 +31,5 @@ Route::get('/menu',[App\Http\Controllers\DashboardController::class,'menu']);
 Route::get('/perfil',[App\Http\Controllers\DashboardController::class,'showProfile']);
 Route::get('/editP',[App\Http\Controllers\DashboardController::class,'edit']);
 Route::post('/editProfile',[App\Http\Controllers\DashboardController::class,'editPerfil']);
+Route::get('/dashboard/newpedido',[App\Http\Controllers\DashboardController::class,'nuevoPedido']);
 Auth::routes();

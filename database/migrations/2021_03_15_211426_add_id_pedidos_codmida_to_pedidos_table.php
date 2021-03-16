@@ -16,7 +16,7 @@ class AddIdPedidosCodmidaToPedidosTable extends Migration
         Schema::table('pedidos', function (Blueprint $table) {
             $table->unsignedInteger('id_pedidos_comida');
             $table->foreign('id_pedidos_comida')->references('id')->on('pedidos_comida');
-            $table->unsignedInteger('id_servicio');
+            $table->unsignedInteger('id_servicio')->nullable();
             $table->foreign('id_servicio')->references('id')->on('servicio');
         });
     }
