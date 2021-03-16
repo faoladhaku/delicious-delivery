@@ -47,13 +47,13 @@
 
 			<div class="container w-100 p-3">
 				<div class="row justify-content-md-center">
-					<h1 class="text-light">Delicious Delivery</h1>
+					<h1 class="text-light text-center" style="font-family: Lucida Handwriting">Delicious Delivery</h1>
 				</div>
 			</div>
 
 			<div class="profile">
 				<img src="/img/perfil.jpg" alt="" class="img-fluid rounded-circle">
-				<h1 class="text-light">Bienvenido {{$name->name}}</h1>
+				<h1 class="text-light" style="font-family: Brush Script MT">Bienvenido {{$name->name}}</h1>
 
 			</div>
 	
@@ -93,16 +93,16 @@
 			<div class="row">
 				<div class="col"></div>
 				<div class="col" >
-					<a href="#" class="twitter"><i class="bi bi-whatsapp" style="font-size: 1.2rem;"></i></a>
+					<a href="#" class="twitter"><i class="bi bi-whatsapp" style="font-size: 1.2rem;color: #E19614"></i></a>
 				</div>
 				<div class="col">
-					<a href="#" class="facebook"><i class="bi bi-facebook" style="font-size: 1.2rem;"></i></a>
+					<a href="#" class="facebook"><i class="bi bi-facebook" style="font-size: 1.2rem;color: #E19614"></i></a>
 				</div>
 				<div class="col">
-					<a href="#" class="instagram"><i class="bi bi-instagram" style="font-size: 1.2rem;"></i></a>
+					<a href="#" class="instagram"><i class="bi bi-instagram" style="font-size: 1.2rem; color: #E19614"></i></a>
 				</div>
 				<div class="col">
-					<a href="#" class="instagram"><i class="bi bi-youtube" style="font-size: 1.2rem;"></i></a>
+					<a href="#" class="instagram"><i class="bi bi-youtube" style="font-size: 1.2rem; color: #E19614 "></i></a>
 				</div>
 				<div class="col"></div>
 			</div>
