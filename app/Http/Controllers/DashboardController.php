@@ -116,7 +116,7 @@ class DashboardController extends Controller
             );
             //creando el pedido
             $pedido = DB::table('pedidos')->insertGetId(
-                array('Fecha_Inicio' =>$_mytime->format('d-m-Y'), 'Fecha_Final' => $mytimein7days->format('d-m-Y'), 'user_id' => $currentUser->id, 'id_pedidos_comida' => $pedido_comida,'id_servicio' => '1')
+                array('Fecha_Inicio' =>$_mytime->format('Y-m-d'), 'Fecha_Final' => $mytimein7days->format('Y-m-d'), 'user_id' => $currentUser->id, 'id_pedidos_comida' => $pedido_comida,'id_servicio' => '1')
             );
             //DB::insert('insert into pedidos_comida (Lunes, Martes, Miercoles, Jueves, Viernes, Sabado, Domingo) values (?, ?, ?, ?, ?, ?, ?)',[$data["lunes"],$data["martes"],$data["miercoles"],$data["jueves"],$data["viernes"],$data["sabado"],$data["domingo"]]);
 
