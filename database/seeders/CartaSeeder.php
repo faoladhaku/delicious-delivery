@@ -13,6 +13,13 @@ class CartaSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('carta')->insert([
+
+            'comidas_id'=> '1',
+            'bebida_id'=>'1',
+            'postre_id'=>'1',
+            'lugar_hora_id'=>'1',
+
+        ]);
     }
 }

@@ -13,6 +13,9 @@ class ServicioSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('servicio')->insert([
+            'costo'=>30,
+            'descripcion'=>'Precio para gozus',
+        ]);
     }
 }
