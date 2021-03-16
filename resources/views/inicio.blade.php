@@ -32,7 +32,7 @@
 					<div class="col-md-7">
 						<div class="card-body">
 							<div class="brand-wrapper">
-								<img src="/img/logo.svg" alt="logo" class="logo">
+								<img src="/img/logo3.svg" alt="logo" class="logo">
 							</div>
 							<p class="login-card-description">Iniciar Sesion</p>
 							<form action="/login/normal" method="POST">

@@ -24,6 +24,7 @@
 
 	<!--== Estilos ==-->
 	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/style2.css">
 
 </head>
 <body>
@@ -52,7 +53,7 @@
 
 			<div class="profile">
 				<img src="/img/perfil.jpg" alt="" class="img-fluid rounded-circle">
-				<h1 class="text-light">Bienvenido {{$name}}</h1>
+				<h1 class="text-light">Bienvenido {{$name->name}}</h1>
 
 			</div>
 	

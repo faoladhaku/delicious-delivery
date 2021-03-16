@@ -33,7 +33,7 @@
 					<div class="col-md-7">
 						<div class="card-body">
 							<div class="brand-wrapper">
-								<img src="/img/logo.svg" alt="logo" class="logo">
+								<img src="/img/logo3.svg" alt="logo" class="logo">
 							</div>
 							<a href="{{ url('/') }}"><i class="bi bi-chevron-compact-left"></i> Regresar</a>
 							<p class="login-card-description">Registro</p>

@@ -19,7 +19,7 @@
 									<input type="email" name="email" id="email" class="form-control" placeholder="{{$name->email}}">
 								</div>
                                 <br>
-								<button>Editar</button>
+								<button>Guardar</button>
 							</form>
 						</div>
 					</div>
