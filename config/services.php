@@ -32,7 +32,7 @@ return [
     'facebook' => [
         'client_id' => '463424768323070',
         'client_secret' => '775229795b5522a08a817dce71f91b0a',
-        'redirect' => 'https://dry-fortress-16131.herokuapp.com/callback'
+        'redirect' => 'https://dry-fortress-16131.herokuapp.com/login/facebook/callback'
         //'redirect' => 'http://localhost:8000/login/facebook/callback'
     ],
 ];
