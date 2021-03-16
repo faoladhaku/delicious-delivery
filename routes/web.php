@@ -32,4 +32,7 @@ Route::get('/perfil',[App\Http\Controllers\DashboardController::class,'showProfi
 Route::get('/editP',[App\Http\Controllers\DashboardController::class,'edit']);
 Route::post('/editProfile',[App\Http\Controllers\DashboardController::class,'editPerfil']);
 Route::get('/dashboard/newpedido',[App\Http\Controllers\DashboardController::class,'nuevoPedido']);
+Route::get('/Pedidos',[App\Http\Controllers\DashboardController::class,'Pedidos']);
+Route::get('/Pedido/{id}',[App\Http\Controllers\DashboardController::class,'infoPedidos'])->name('Pedido.id');
+
 Auth::routes();

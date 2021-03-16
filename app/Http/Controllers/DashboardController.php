@@ -23,7 +23,7 @@ class DashboardController extends Controller
         $bebidas = DB::table('bebidas')->get();
         $postres = DB::table('postres')->get();
 
-        return view('dashboard.menu')->with(['items'=>$items,'bebidas'=>$bebidas,'postres'=>$postres,'name'=>$currentUser->name]);
+        return view('dashboard.menu')->with(['items'=>$items,'bebidas'=>$bebidas,'postres'=>$postres,'name'=>$currentUser]);
     }
     public function logout()
     {
@@ -50,6 +50,21 @@ class DashboardController extends Controller
        
         return view("Perfil",['name'=>$UpUser]);
     }
+
+    
+    public function Pedidos()
+    {   
+        $currentUser = Auth::user();
+       // $items = DB::table('pedidos')->select('*')->where('user_id', '=', $currentUser->id )->get();
+
+        $items2 = DB::table('pedidos')
+                    ->join('servicio','pedidos.id_servicio','=','servicio.id')
+                    ->select('*')
+                    ->get();
+
+
+        return view("Pedidos",['name'=>$currentUser,'items'=>$items2]);
+    }
     public function nuevoPedido(Request $request)
     {
         $data = $request->input();
@@ -57,7 +72,10 @@ class DashboardController extends Controller
         //dd($currentUser->id);
         //dd($data);
         $mytime = Carbon::now();
+        $_mytime = Carbon::now();
         $mytimein7days = $mytime->addDays(7);
+
+       
         //dd($mytime->toDateTimeString());
         //dd($mytimein7days->toDateTimeString());
         try{
@@ -98,7 +116,7 @@ class DashboardController extends Controller
             );
             //creando el pedido
             $pedido = DB::table('pedidos')->insertGetId(
-                array('Fecha_Inicio' => $mytime->format('d-m-Y'), 'Fecha_Final' => $mytimein7days->format('d-m-Y'), 'user_id' => $currentUser->id, 'id_pedidos_comida' => $pedido_comida)
+                array('Fecha_Inicio' =>$_mytime->format('d-m-Y'), 'Fecha_Final' => $mytimein7days->format('d-m-Y'), 'user_id' => $currentUser->id, 'id_pedidos_comida' => $pedido_comida,'id_servicio' => '1')
             );
             //DB::insert('insert into pedidos_comida (Lunes, Martes, Miercoles, Jueves, Viernes, Sabado, Domingo) values (?, ?, ?, ?, ?, ?, ?)',[$data["lunes"],$data["martes"],$data["miercoles"],$data["jueves"],$data["viernes"],$data["sabado"],$data["domingo"]]);
 
