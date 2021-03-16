@@ -1,7 +1,7 @@
 @extends('layout')
 @section('content')
 <div class="col-md-auto">
-    <h4 class="text-center"><strong>PERFIL</strong></h4>
+    <h4 class="text-center" style="font-family: Lucida Handwriting "><strong>PERFIL</strong></h4>
     <hr>
     <div class="profile-card-4 text-center"><img src="https://aws.glamour.mx/prod/designs/v1/assets/3000x1575/225340.jpg" class="img img-responsive" style="max-width: 100%">
         <div class="profile-content">
